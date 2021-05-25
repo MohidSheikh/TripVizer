@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/aos.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/styles/owl.theme.default.min.css">
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/owl.carousel.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <header>
+        
+        <a href="#" class="brand">Trip<span>Vizer</span></a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fa fa-times close-btn"></i>
+            </div>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#tour">Tour</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fa fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <!-- home -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text-1">Enjoy the best destination with our travel agency</div>
+            <div class="text-2"><span class="typing"></span></div>
+            <a href="#" class="btn">Get in touch</a>
+        </div>
+    </section>
+   </div>
+
+   <!-- services -->
+
+   <section class="services" id="services">
+       <h1>Our Services</h1>
+        <div class="service">
+            <a href="#">
+                <div class="grid">   
+                    <h3><i class="fa fa-hourglass-end"></i> Personalized Matching</h3>
+                    <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="grid">   
+                    <h3><i class="fas fa-medal"></i> Wide Variety of Tours</h3>
+                    <p>We offer a wide variety of personally picked tours with destinations all over the globe.</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="grid">   
+                    <h3><i class="far fa-star"></i> Highly Qualified Service</h3>
+                    <p>Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="grid">   
+                    <h3><i class="fas fa-headset"></i> 24/7 Support</h3>
+                    <p>You can always get professional support from our staff 24/7 and ask any question you have.</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="grid">   
+                    <h3><i class="fas fa-fire"></i> Handpicked Hotel</h3>
+                    <p>Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="grid">   
+                    <h3><i class="fas fa-wallet"></i> Best Price Guarantee</h3>
+                    <p>If you find tours that are cheaper than ours, we will compensate the difference.</p>
+                </div>
+            </a>
+            
+        </div>
+   </section>
+
+   <section class="tour" id="tour">
+       <h1 class="tour-h">Hot Tour</h1>
+       <div class="packages">
+          <div class="pkg1">
+              <img src="assets/images/ondrej-bocek-CdI94Rt2vd8-unsplash.jpg" alt="">
+              <div class="details">
+                  <h1>Mauritius</h1>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eius obcaecati, voluptates voluptatum laborum expedita maxime quasi? Ducimus, vero sunt?</p>
+                  <a href="#" class="btn">Buy This Tour</a>
+                  <a href="#">$800</a>
+              </div>
+          </div>
+
+          <div class="pkg2">
+              <img src="assets/images/bg1.jpg" alt="">
+              <div class="details">
+                <h1>Maldives</h1>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eius obcaecati, voluptates voluptatum laborum expedita maxime quasi? Ducimus, vero sunt?</p>
+                <a href="#" class="btn">Buy This Tour</a>
+                <a href="#">$800</a>
+            </div>
+          </div>
+       </div>
+   </section>
+
+  
+        
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+</body>
+<script>
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+    var menu = document.querySelector('.menu');
+    var menubtn = document.querySelector('.menu-btn');
+    var closebtn = document.querySelector('.close-btn');
+
+    menubtn.addEventListener("click", () => {
+        menu.classList.add('active');
+    });
+
+    closebtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+    });
+
+
+    var typed = new Typed(".typing", {
+        strings: ["Explore The World", "Create Your Tour", "Trust Our Experience"],
+        typeSpeed: 100,
+        backSpeed: 40,
+        loop: true
+    });
+
+    AOS.init();
+
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+});
+
+
+</script>
+<!-- <script src="assets/scripts/aos.js"></script> -->
+</html>
